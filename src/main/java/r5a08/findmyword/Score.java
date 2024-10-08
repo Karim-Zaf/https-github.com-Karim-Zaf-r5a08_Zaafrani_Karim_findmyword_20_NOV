@@ -33,4 +33,7 @@ public class Score {
         return Letter.INCORRECT;
     }
 
+    public ArrayList<Letter> letters() {
+        return results ;
+    }
 }
