@@ -15,7 +15,6 @@ public class WordTest {
         Letter actual = sc.letter(0) ;
         Letter expected = Letter.INCORRECT;
 
-
         // Assert
         Assertions.assertEquals(expected, actual);
     }
@@ -31,8 +30,20 @@ public class WordTest {
         Letter actual = sc.letter(0);
         Letter expected = Letter.CORRECT;
 
-
         // Assert
         Assertions.assertEquals(expected, actual);
+    }
+
+    @Test void should_check_two_incorrect_caracters(){
+        // Arrange
+        Word word = new Word ("AB") ;
+
+
+        // Act
+        Score sc= word.guess ("CD") ;
+
+
+        // Assert
+        
     }
 }
