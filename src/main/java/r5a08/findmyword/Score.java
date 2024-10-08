@@ -1,29 +1,37 @@
 package r5a08.findmyword;
 
+import java.util.ArrayList;
+
 public class Score {
-    String mot_correct;
-    Letter result;
+    String correct;
+    ArrayList<Letter> results;
 
     public Score(String mot) {
-        this.mot_correct = mot;
-        this.result = Letter.INCORRECT; // initaliser la variable result à Incorrect
+        this.correct = mot;
+        this.results = new ArrayList<Letter>(2); // initaliser la variable result à Incorrect
+
+        // Remplir `results` avec des lettres incorrectes par défaut
+        for (int i = 0; i < 2 ; i++) {
+            results.add(Letter.INCORRECT);
+        }
     }
 
     // Retourne le résultat de l'essai
     public Letter letter(int index) {
-        return this.result; // J'ai utiliser l'indice 0 pour un code minimale pour faire passer le test
+        return this.results.get(index); // J'ai utiliser l'indice 0 pour un code minimale pour faire passer le test
     }
 
     // la fonction assess nous indique le résultat de notre essai pour un indice donné
-    public void assess(int index, String essai) {
-        if ( compare (mot_correct,essai,0))
-                // J'ai utiliser l'indice 0 pour un code minimale pour faire passer le test
-            result = Letter.CORRECT;
+    public void assess(String attempt, int index) {
+        // J'ai utiliser l'indice 0 pour un code minimale pour faire passer le test
+        results.set(index, scoreFor (attempt.charAt(index) , index));
     }
 
-    // la méthode "compare" 2 chaines de caractères à un indice donée
-    public boolean compare (String correct , String essai , int index ){
-        return  correct.charAt(0)== essai.charAt(0);
+    // la méthode "compare" 2 chaines de caractères pour un caractère donné
+    public Letter scoreFor ( char current , int index ){
+        if (correct.charAt(index) ==  current) return Letter.CORRECT;
+        else if (correct.contains(String.valueOf(current))) return Letter.PART_CORRECT;
+        return Letter.INCORRECT;
     }
 
 }

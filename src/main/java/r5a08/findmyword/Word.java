@@ -12,7 +12,7 @@ public class Word {
     public Score guess(String essai) {
         Score score = new Score(mot_a_deviner);
 
-        score.assess(0, essai);
+        score.assess( essai,0);
 
         return score;
     }
