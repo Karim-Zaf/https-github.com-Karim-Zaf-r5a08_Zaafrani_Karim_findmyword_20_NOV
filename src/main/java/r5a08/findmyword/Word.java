@@ -12,7 +12,8 @@ public class Word {
     public Score guess(String essai) {
         Score score = new Score(mot_a_deviner);
 
-        score.assess( essai,0);
+        for (int i= 0 ; i<mot_a_deviner.length() ; i++)
+            score.assess( essai,i);
 
         return score;
     }
