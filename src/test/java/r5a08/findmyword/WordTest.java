@@ -11,12 +11,13 @@ public class WordTest {
         Word word = new Word("E"); // Le mot à déviner fait une lettre
 
         // Act
-        Score actual = word.guess("B"); // tentative du joueur
+        Score sc = word.guess("B"); // tentative du joueur à une seule lettre
+        Letter actual = sc.letter(0) ;
         Letter expected = Letter.INCORRECT;
 
 
         // Assert
-        Assertions.assertEquals(expected, actual.letter(0));
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
@@ -26,11 +27,12 @@ public class WordTest {
         Word word = new Word("E"); // Le mot à déviner fait une lettre
 
         // Act
-        Score actual = word.guess("E"); // tentative du joueur
+        Score sc = word.guess("E"); // tentative du joueur à une seule lettre
+        Letter actual = sc.letter(0);
         Letter expected = Letter.CORRECT;
 
 
         // Assert
-        Assertions.assertEquals(expected, actual.letter(0));
+        Assertions.assertEquals(expected, actual);
     }
 }

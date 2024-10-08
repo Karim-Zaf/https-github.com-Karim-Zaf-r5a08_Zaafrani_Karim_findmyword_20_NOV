@@ -2,23 +2,28 @@ package r5a08.findmyword;
 
 public class Score {
     String mot_correct;
-    Letter[] evaluation_chaque_lettre;
+    Letter result;
 
     public Score(String mot) {
         this.mot_correct = mot;
-        this.evaluation_chaque_lettre = new Letter[5];
+        this.result = Letter.INCORRECT; // initaliser la variable result à Incorrect
     }
 
-
+    // Retourne le résultat de l'essai
     public Letter letter(int index) {
-        return evaluation_chaque_lettre[0]; // J'ai utiliser l'indice 0 pour un code minimale pour faire passer le test
+        return this.result; // J'ai utiliser l'indice 0 pour un code minimale pour faire passer le test
     }
 
+    // la fonction assess nous indique le résultat de notre essai pour un indice donné
     public void assess(int index, String essai) {
-        if ( mot_correct.charAt(0)== essai.charAt(0))
+        if ( compare (mot_correct,essai,0))
                 // J'ai utiliser l'indice 0 pour un code minimale pour faire passer le test
-            evaluation_chaque_lettre[0] = Letter.CORRECT;
-        else
-            evaluation_chaque_lettre[0] = Letter.INCORRECT ;
+            result = Letter.CORRECT;
     }
+
+    // la méthode "compare" 2 chaines de caractères à un indice donée
+    public boolean compare (String correct , String essai , int index ){
+        return  correct.charAt(0)== essai.charAt(0);
+    }
+
 }
