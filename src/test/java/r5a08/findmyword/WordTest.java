@@ -11,7 +11,7 @@ public class WordTest {
         Word word = new Word("E"); // Le mot à déviner fait une lettre
 
         // Act
-        Score sc = word.guess("B"); // tentative du joueur
+        Score sc = word.guess("B"); // tentative du joueur à une seule lettre
         Letter actual = sc.letter(0) ;
         Letter expected = Letter.INCORRECT;
 
@@ -27,7 +27,7 @@ public class WordTest {
         Word word = new Word("E"); // Le mot à déviner fait une lettre
 
         // Act
-        Score sc = word.guess("E"); // tentative du joueur
+        Score sc = word.guess("E"); // tentative du joueur à une seule lettre
         Letter actual = sc.letter(0);
         Letter expected = Letter.CORRECT;
 
