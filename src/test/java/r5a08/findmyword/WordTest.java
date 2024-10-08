@@ -1,5 +1,6 @@
 package r5a08.findmyword;
 
+import static org.assertj.core.api.Assertions.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -81,7 +82,14 @@ public class WordTest {
         // Act
         Score score = word.guess("BA");
 
-        Letter actualFirst = score.letter(0);
+        // Assert
+
+        assertAllCombinaisons(score,
+                Letter.PART_CORRECT,
+                Letter.PART_CORRECT);
+
+
+        /** Letter actualFirst = score.letter(0);
         Letter actualSecond = score.letter(1);
 
         Letter expectedFirst = Letter.PART_CORRECT;
@@ -89,7 +97,17 @@ public class WordTest {
 
         // Assert
         Assertions.assertEquals(expectedFirst, actualFirst);
-        Assertions.assertEquals(expectedSecond, actualSecond);
+        Assertions.assertEquals(expectedSecond, actualSecond);*/
+        
+    }
+
+    private void assertAllCombinaisons(Score score, Letter... expecteds) {
+        int i=0;
+        for (Letter letter : expecteds){
+            assertThat(score.letter(i)).isEqualTo(letter);
+            i++;
+        }
+
     }
 
     @Test
