@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="r5a08.findmyword.WordTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-10-08T08:18:37" hostname="einfolearning" time="0.012">
+<testsuite name="r5a08.findmyword.WordTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-10-08T10:01:36" hostname="einfolearning" time="0.012">
   <properties/>
-  <testcase name="should_check_one_incorrect_letter()" classname="r5a08.findmyword.WordTest" time="0.011"/>
-  <testcase name="should_check_one_correct_letter()" classname="r5a08.findmyword.WordTest" time="0.0"/>
+  <testcase name="should_check_all_letters_part_correct()" classname="r5a08.findmyword.WordTest" time="0.012"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
