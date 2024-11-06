@@ -8,6 +8,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class WordTest {
+
+    private void assertScoreForLetter(Score score, int position, Letter expected) {
+        assertThat(score.letter(position))
+                .isEqualTo(expected);
+    }
     @Test
     public void should_check_one_incorrect_letter(){
         // Arrange
@@ -17,7 +22,7 @@ public class WordTest {
         Score score = word.guess("B");
 
         // Assert
-        assertThat(score.letter(0)).isEqualTo(Letter.INCORRECT);
+        assertScoreForLetter(score ,0, Letter.INCORRECT);
     }
 
     @Test
@@ -29,7 +34,7 @@ public class WordTest {
         Score score = word.guess("E");
 
         // Assert
-        assertThat(score.letter(0)).isEqualTo(Letter.CORRECT);
+        assertScoreForLetter(score ,0,  Letter.CORRECT);
     }
 }
 
