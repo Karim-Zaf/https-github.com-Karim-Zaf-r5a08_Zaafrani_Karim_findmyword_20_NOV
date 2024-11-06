@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="r5a08.findmyword.WordTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2024-10-08T17:43:40" hostname="PC-Karim" time="0.075">
+<testsuite name="r5a08.findmyword.WordTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2024-11-06T08:20:30" hostname="einfolearning" time="0.053">
   <properties/>
-  <testcase name="should_check_one_incorrect_letter()" classname="r5a08.findmyword.WordTest" time="0.017"/>
-  <testcase name="should_check_two_incorrect_characters()" classname="r5a08.findmyword.WordTest" time="0.045"/>
-  <testcase name="should_check_two_correct_characters()" classname="r5a08.findmyword.WordTest" time="0.002"/>
+  <testcase name="should_check_one_incorrect_letter()" classname="r5a08.findmyword.WordTest" time="0.014"/>
+  <testcase name="should_check_two_incorrect_characters()" classname="r5a08.findmyword.WordTest" time="0.03"/>
+  <testcase name="should_check_two_correct_characters()" classname="r5a08.findmyword.WordTest" time="0.001"/>
   <testcase name="should_check_two_part_correct_characters()" classname="r5a08.findmyword.WordTest" time="0.001"/>
   <testcase name="should_check_one_part_correct_one_incorrect()" classname="r5a08.findmyword.WordTest" time="0.001"/>
-  <testcase name="should_check_all_letters_part_correct()" classname="r5a08.findmyword.WordTest" time="0.001"/>
-  <testcase name="should_check_4_letters_part_correct_one_correct_letter()" classname="r5a08.findmyword.WordTest" time="0.001"/>
+  <testcase name="should_check_all_letters_part_correct()" classname="r5a08.findmyword.WordTest" time="0.0"/>
+  <testcase name="should_check_4_letters_part_correct_one_correct_letter()" classname="r5a08.findmyword.WordTest" time="0.0"/>
   <testcase name="should_check_one_correct_letter()" classname="r5a08.findmyword.WordTest" time="0.001"/>
   <testcase name="should_check_all_5_letters_incorect()" classname="r5a08.findmyword.WordTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
