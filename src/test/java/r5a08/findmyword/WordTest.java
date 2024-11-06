@@ -4,8 +4,10 @@ import static org.assertj.core.api.Assertions.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class WordTest {
     @Test
@@ -17,7 +19,7 @@ public class WordTest {
         Score score = word.guess("B");
 
         // Assert
-        assertScoreForLetter(score ,0, Letter.INCORRECT);
+        assertScoreForGuess(score, Letter.INCORRECT);
     }
 
     @Test
@@ -29,7 +31,7 @@ public class WordTest {
         Score score = word.guess("E");
 
         // Assert
-        assertScoreForLetter(score ,0,  Letter.CORRECT);
+        assertScoreForGuess(score, Letter.CORRECT);
     }
     @Test
     public void should_check_second_letter_wrong_position(){
@@ -40,7 +42,10 @@ public class WordTest {
         Score score = word.guess("GE");
 
         // Assert
-        assertScoreForLetter(score ,1,  Letter.PART_CORRECT);
+        assertScoreForGuess(score ,
+                Letter.INCORRECT,
+                Letter.PART_CORRECT
+        );
     }
     @Test
     public void should_check_all_score_combinaisons_correct(){
@@ -51,14 +56,17 @@ public class WordTest {
         Score score = word.guess("GET");
 
         // Assert
-        assertScoreForLetter(score ,0,  Letter.INCORRECT);
-        assertScoreForLetter(score ,1,  Letter.PART_CORRECT);
-        assertScoreForLetter(score ,2,  Letter.CORRECT);
+        assertScoreForGuess(score ,
+                Letter.INCORRECT,
+                Letter.PART_CORRECT,
+                Letter.CORRECT
+        );
     }
-
-    private void assertScoreForLetter(Score score, int position, Letter expected) {
-        assertThat(score.letter(position)).isEqualTo(expected);
+    private void assertScoreForGuess(Score score, Letter... expectedScores) {
+        for (int position = 0 ; position < expectedScores.length; position++){
+            Letter expected = expectedScores [position];
+            assertThat(score.letter(position))
+                    .isEqualTo(expected) ;
+        }
     }
 }
-
-
