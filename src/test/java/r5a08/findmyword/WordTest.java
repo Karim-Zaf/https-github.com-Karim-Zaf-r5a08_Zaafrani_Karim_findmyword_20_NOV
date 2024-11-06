@@ -1,13 +1,8 @@
 package r5a08.findmyword;
 
 import static org.assertj.core.api.Assertions.*;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class WordTest {
     @Test
@@ -65,8 +60,7 @@ public class WordTest {
     private void assertScoreForGuess(Score score, Letter... expectedScores) {
         for (int position = 0 ; position < expectedScores.length; position++){
             Letter expected = expectedScores [position];
-            assertThat(score.letter(position))
-                    .isEqualTo(expected) ;
+            assertThat(score.letter(position)).isEqualTo(expected) ;
         }
     }
 }
