@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-junit-jupiter/5.0.0/ff5cd5eca4d24524a242a6f808077b2eea8a574c/mockito-junit-jupiter-5.0.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/5.0.0/6e3f9065903066e9d638428c9e1333fa476256fb/mockito-core-5.0.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.9.2/6f9f8621d8230cd38aa42e58ccbc0c00569131ce/junit-platform-commons-1.9.2.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.9.2/fed843581520eac594bc36bb4b0f55e7b947dda9/junit-jupiter-api-5.9.2.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.12.22/984e536b4f3fb668b21f15b90c1e8704292d4bdd/byte-buddy-1.12.22.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.12.22/9c4127080df12304336ca90c2ef3f8b7d72915c1/byte-buddy-agent-1.12.22.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/3.3/1049c09f1de4331e8193e579448d0916d75b7631/objenesis-3.3.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.2.0/28c11eb91f9b6d8e200631d46e20a7f407f2a046/opentest4j-1.2.0.jar" />
+        </processorPath>
+        <module name="r5a08_junit_tests.test" />
+      </profile>
+    </annotationProcessing>
     <bytecodeTargetLevel target="17" />
   </component>
 </project>
